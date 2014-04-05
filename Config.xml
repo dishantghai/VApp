@@ -16,11 +16,11 @@
     <author href="https://build.phonegap.com" email="support@phonegap.com">
         Hardeep Shoker 
     </author>
-
-</widget>
-
 <gap:splash src="mdpi.png" gap:platform="android" gap:density="mdpi" />
 <gap:splash src="hdpi.png" gap:platform="android" gap:density="hdpi" />
 <gap:splash src="xhdpi.png" gap:platform="android" gap:density="xhdpi" />
 <gap:splash src="xxhdpi.png" gap:platform="android" gap:density="xxhdpi" />
+
+</widget>
+
 
