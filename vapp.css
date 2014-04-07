@@ -1,0 +1,29 @@
+.readonly-state {
+	background: #eee !important;
+	font-weight: bold !important;
+	color: #2F3E46 !important;
+	text-shadow: 0 /*{c-bup-shadow-x}*/ 1px /*{c-bup-shadow-y}*/ 0 /*{c-bup-shadow-radius}*/ #ffffff /*{c-bup-shadow-color}*/ !important;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #ffffff /*{c-bup-background-start}*/), to( #f1f1f1 /*{c-bup-background-end}*/)) !important; /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient( #ffffff /*{c-bup-background-start}*/, #f1f1f1 /*{c-bup-background-end}*/) !important; /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #ffffff /*{c-bup-background-start}*/, #f1f1f1 /*{c-bup-background-end}*/) !important; /* FF3.6 */
+	background-image:     -ms-linear-gradient( #ffffff /*{c-bup-background-start}*/, #f1f1f1 /*{c-bup-background-end}*/) !important; /* IE10 */
+	background-image:      -o-linear-gradient( #ffffff /*{c-bup-background-start}*/, #f1f1f1 /*{c-bup-background-end}*/) !important; /* Opera 11.10+ */
+	background-image:         linear-gradient( #ffffff /*{c-bup-background-start}*/, #f1f1f1 /*{c-bup-background-end}*/) !important;   
+    cursor: default !important;
+}
+#list_parties img {
+	padding: 0.8em;
+}
+#list_parties h2 {
+	/*margin: 1.45em;*/
+}
+#list_parties .vt_btn {
+	width:20%;
+}
+#grid_parties .ui-block-c {
+    width: 20% !important;
+}
+
+/*#custom-footer .ui-block-b {
+    width: 20% !important;    
+}*/
