@@ -17,11 +17,21 @@
 #list_parties h2 {
 	/*margin: 1.45em;*/
 }
-#list_parties .vt_btn {
-	width:20%;
+#grid_parties .ui-block-a {
+    width: 15% !important;
 }
+
+#grid_parties .ui-block-b {
+    width: 60% !important;
+}
+
 #grid_parties .ui-block-c {
     width: 20% !important;
+}
+
+#grid_parties label {
+    font-size: 1em;
+	margin: 1em;
 }
 
 /*#custom-footer .ui-block-b {
