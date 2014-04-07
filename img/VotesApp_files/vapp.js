@@ -6,14 +6,12 @@
 /*$("select-choice-13").on("change", function () {
     });*/
 //});
-var state = "";
+var state;
 $(document).on('pageinit', '#page', function(){       
-    
-	
-	//State Select Function
+    //State Select Function
 	$('#select-choice-13').on('change',function(e) {
-    var $this = $(this);
-        state = $this.val();
+    var $this = $(this),
+        state   = $this.val();
 		
 	switch (state)
 	{
@@ -72,36 +70,21 @@ $(document).on('pageinit', '#page', function(){
 	    //alert (val);
 		
 		$('#page2-content').empty();
-		//alert(state);
-		var st= state;
+		
 		$.ajax({
-			
-			url: 'http://www.franchisefood.in/JM/vapp_server/index.php?state='+st,
+			url: 'http://www.franchisefood.in/JM/vapp_server/index.php?state='+state,
 			type: 'GET',
-			dataType: 'json',
+			//dataType: 'json',
 			error : function (){ document.title='error'; }, 
 			success: function (data) {
-			
-			$.each(data, function(i, row) {
-  			var ht='';
-			ht += '<div class="ui-grid-b" id="grid_parties">'+
-		'<div class="ui-block-a"> <img src="img/'+row.party.toLowerCase()+'.png"></div>'+
-	    '<div class="ui-block-b"><label>'+row.party+'</label></div>'+
-	    '<div class="ui-block-c"><button>VOTE</button></div>';
-		//alert(row. party);
-  			
-			$('#page2-content').append(ht);
-			$( ":mobile-pagecontainer" ).pagecontainer( "change", "#page2",{ transition: "slide" });
-			});				
-				
-		//alert(data);
-    	}
+		alert(data);
+    }
 		});
 		
 		
 		
 		
-		/*var ht = '<div class="ui-grid-b" id="grid_parties">'+
+		var ht = '<div class="ui-grid-b" id="grid_parties">'+
 		'<div class="ui-block-a"> <img src="img/bjp.png"></div>'+
 	    '<div class="ui-block-b"><label>Bhartiya Janata Party</label></div>'+
 	    '<div class="ui-block-c"><button>VOTE</button></div>'+
@@ -111,9 +94,10 @@ $(document).on('pageinit', '#page', function(){
         '<div class="ui-block-a"> <img src="img/aap.png"></div>'+
 	    '<div class="ui-block-b"><label>Aam Aadmi Party</label></div>'+
 	    '<div class="ui-block-c"><button >VOTE</button></div>'+
-        '</div> '; */
+        '</div> '; 
 	   
-		
+		$('#page2-content').append(ht);
+		$( ":mobile-pagecontainer" ).pagecontainer( "change", "#page2",{ transition: "slide" });
 	});
 	
 });
