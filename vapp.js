@@ -9,7 +9,11 @@
 var state = "";
 $(document).on('pageinit', '#page', function(){       
     
-	
+	// Setting #container div as a jqm pageContainer
+            $.mobile.pageContainer = $('#container');
+ 
+            // Setting default page transition to slide
+            $.mobile.defaultPageTransition = 'slide';
 	//State Select Function
 	$('#select-choice-13').on('change',function(e) {
     var $this = $(this);
@@ -110,8 +114,20 @@ $(document).on('pageinit', '#page', function(){
 						dataType: 'json',
 						error : function (){ document.title='error'; }, 
 						success: function (data) {
-							alert(data);
+							ht="";
+							$.each(data, function(i, row) {
+								ht +='<a>'+row.party+'</a>&nbsp;<a>'+row.votes+'</a>&nbsp;<a>'+row.perc+'</a><br/>'								
+							});
+							$('#page3-content').empty();
+							$('#page3-content').append(ht);
+							//$( ":mobile-pagecontainer" ).pagecontainer( "change", "#page3",{ transition: "slide" });
 							
+							setTimeout(function(){
+								$.mobile.changePage($('#page3'));
+								e.stopImmediatePropagation();
+    							e.preventDefault();
+   							 	
+							 },200);
 						}
 			
 				});
